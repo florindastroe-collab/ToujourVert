@@ -7,139 +7,54 @@
 
   <title>Toujours Vert – Traduceri Autorizate Sectorul 1 București</title>
   <link rel="stylesheet" href="style.css">
-  --cream: #FAF7F2;
-  --charcoal: #2E2E2E;
-  --white: #FFFFFF;
-}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 
-/* Body background */
-body {
-  background: var(--cream);
-  color: var(--charcoal);
-}
-
-/* Header overlay */
-header::after {
-  background: rgba(46, 139, 87, 0.55);
-}
-
-/* Navigation */
-nav {
-  background: var(--green);
-}
-nav a:hover {
-  background: var(--lavender);
-  color: var(--charcoal);
-}
-
-/* Section titles */
-h2 {
-  color: var(--green);
-}
-
-/* Intro text */
-.intro-text {
-  background: var(--white);
-  border-left: 6px solid var(--lavender);
-}
-
-/* Service boxes */
-.service-box {
-  background: var(--white);
-  border-top: 5px solid var(--lavender);
-}
-.service-box:hover {
-  box-shadow: 0 8px 20px rgba(199, 184, 234, 0.35);
-  transform: translateY(-5px);
-}
-.service-box h3 {
-  color: var(--lavender);
-}
-
-/* Price boxes */
-.price-box {
-  background: var(--white);
-  border-top: 5px solid var(--lavender);
-}
-.price-box h3 {
-  color: var(--lavender);
-}
-
-/* Buttons */
-form button {
-  background: var(--lavender);
-  color: var(--charcoal);
-}
-form button:hover {
-  background: #b7a4e0;
-}
-
-/* Contact form focus */
-#contact form input:focus,
-#contact form textarea:focus,
-#contact form select:focus {
-  border-color: var(--lavender);
-  box-shadow: 0 0 8px rgba(199, 184, 234, 0.35);
-}
-
-/* Floating buttons */
-.floating-buttons a.call {
-  background: var(--lavender);
-  color: var(--charcoal);
-}
-.floating-buttons a.whatsapp {
-  background: var(--green);
-}
-
-/* Footer */
-footer {
-  background: var(--charcoal);
-  color: var(--white);
-}
-
-
-  </style>
 
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <h1 class="logo fade-up">Toujours Vert</h1>
-    <p class="fade-up">Traduceri Autorizate și Legalizate – București</p>
-    <p style="text-align:center; margin-top:10px; color:#f0f0f0; font-size:1.1em;">
+    <h1 id="main-title" class="logo fade-up" data-trans="header">Toujours Vert</h1>
+    <p id="main-subtitle" class="fade-up" data-trans="subtitle">Traduceri Autorizate și Legalizate – București</p>
+    <p id="main-banner" style="text-align:center; margin-top:10px; color:#f0f0f0; font-size:1.1em;" data-trans="banner">
       Traducători autorizați • Servicii rapide • Confidențialitate garantată pentru toate documentele
     </p>
   </header>
 
   <!-- NAVIGATION -->
   <nav>
-    <a href="#services">Servicii</a>
-    <a href="#prices">Prețuri</a>
-    <a href="#languages">Limbi</a>
-    <a href="#contact">Contact</a>
-    <a href="#location">Locație</a>
+    <a id="nav-services" href="#services" data-trans="nav.services">Servicii</a>
+    <a id="nav-prices" href="#prices" data-trans="nav.prices">Prețuri</a>
+    <a id="nav-languages" href="#languages" data-trans="nav.languages">Limbi</a>
+    <a id="nav-contact" href="#contact" data-trans="nav.contact">Contact</a>
+    <a id="nav-location" href="#location" data-trans="nav.location">Locație</a>
+    <select id="lang-select" aria-label="Select language" style="margin-left:20px; padding:10px 18px; border-radius:6px; border:none; font-size:1em; font-family:inherit; font-weight:500; background:#2E8B57; color:white; cursor:pointer;">
+      <option value="ro">Română</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
   </nav>
 
   <!-- INTRO -->
-  <h2 style="text-align:center; margin-top:25px; color:#2E8B57;">
+  <h2 id="intro-title" style="text-align:center; margin-top:25px; color:#2E8B57;" data-trans="introTitle">
     Birou de Traduceri Autorizate în Sector 1
   </h2>
 
-  <p class="intro-text fade-up" style="
+  <p id="intro-text" class="intro-text fade-up" style="
     background:#ffffff;
     padding:15px 20px;
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.05);
     margin:20px auto;
-    max-width:900px;">
+    max-width:900px;" data-trans="introText">
     Oferim traduceri autorizate și legalizate în peste 20 de limbi, direct în Sectorul 1, București. Rapid, profesionist și la prețuri accesibile!
   </p>
 
   <!-- WHY CHOOSE US -->
-  <section style="margin-top:30px; text-align:center;">
-    <h2 style="color:#2E8B57;">De ce să ne alegi?</h2>
-    <p style="max-width:800px; margin:10px auto; color:#555;">
+  <section id="why-us" style="margin-top:30px; text-align:center;">
+    <h2 id="why-title" style="color:#2E8B57;" data-trans="whyTitle">De ce să ne alegi?</h2>
+    <p id="why-text" style="max-width:800px; margin:10px auto; color:#555;" data-trans="whyText">
       Traduceri autorizate, livrare rapidă, prețuri corecte și confidențialitate garantată. 
       Colaborăm cu traducători autorizați de Ministerul Justiției și oferim suport în peste 20 de limbi.
     </p>
@@ -149,43 +64,43 @@ footer {
 
     <!-- SERVICES -->
     <section id="services">
-      <h2 class="fade-up">Serviciile noastre</h2>
+      <h2 id="services-title" class="fade-up" data-trans="servicesTitle">Serviciile noastre</h2>
 
       <div class="services">
 
         <div class="service-box fade-up">
-          <img src="https://img.icons8.com/ios/100/2E8B57/document--v1.png" alt="Traduceri documente oficiale">
-          <h3>Documente oficiale</h3>
-          <p>
+          <img src="https://img.icons8.com/ios/100/2E8B57/document--v1.png" alt="Icon documente oficiale - Traduceri documente oficiale">
+          <h3 id="service-documents" data-trans="serviceDocuments">Documente oficiale</h3>
+          <p id="service-documents-desc" data-trans="serviceDocumentsDesc">
             Traduceri autorizate pentru acte notariale, certificate de naștere, căsătorie, studii, contracte și documente juridice.
-            <a href="#contact" style="color:#2E8B57; font-weight:600;">Solicită o ofertă</a>
+            <a id="service-documents-link" href="#contact" style="color:#2E8B57; font-weight:600;" data-trans="serviceDocumentsLink">Solicită o ofertă</a>
           </p>
         </div>
 
         <div class="service-box fade-up">
-          <img src="https://img.icons8.com/ios/100/2E8B57/settings.png" alt="Traduceri tehnice">
-          <h3>Traduceri tehnice</h3>
-          <p>
+          <img src="https://img.icons8.com/ios/100/2E8B57/settings.png" alt="Icon setări - Traduceri tehnice">
+          <h3 id="service-technical" data-trans="serviceTechnical">Traduceri tehnice</h3>
+          <p id="service-technical-desc" data-trans="serviceTechnicalDesc">
             Traduceri tehnice pentru manuale, fișe tehnice, documentație industrială, inginerie, IT și telecomunicații.
-            <a href="#contact" style="color:#2E8B57; font-weight:600;">Solicită o ofertă</a>
+            <a id="service-technical-link" href="#contact" style="color:#2E8B57; font-weight:600;" data-trans="serviceTechnicalLink">Solicită o ofertă</a>
           </p>
         </div>
 
         <div class="service-box fade-up">
-          <img src="https://img.icons8.com/ios/100/2E8B57/stethoscope.png" alt="Traduceri medicale">
-          <h3>Traduceri medicale</h3>
-          <p>
+          <img src="https://img.icons8.com/ios/100/2E8B57/stethoscope.png" alt="Icon stetoscop - Traduceri medicale">
+          <h3 id="service-medical" data-trans="serviceMedical">Traduceri medicale</h3>
+          <p id="service-medical-desc" data-trans="serviceMedicalDesc">
             Traduceri medicale pentru analize, rapoarte medicale, fișe pacienți, scrisori medicale și documente clinice.
-            <a href="#contact" style="color:#2E8B57; font-weight:600;">Solicită o ofertă</a>
+            <a id="service-medical-link" href="#contact" style="color:#2E8B57; font-weight:600;" data-trans="serviceMedicalLink">Solicită o ofertă</a>
           </p>
         </div>
 
         <div class="service-box fade-up">
-          <img src="https://img.icons8.com/ios/100/2E8B57/paper-plane.png" alt="Traduceri generale">
-          <h3>Traduceri generale</h3>
-          <p>
+          <img src="https://img.icons8.com/ios/100/2E8B57/paper-plane.png" alt="Icon avion hârtie - Traduceri generale">
+          <h3 id="service-general" data-trans="serviceGeneral">Traduceri generale</h3>
+          <p id="service-general-desc" data-trans="serviceGeneralDesc">
             Traduceri generale pentru documente personale, e-mailuri, conținut web, CV-uri și corespondență.
-            <a href="#contact" style="color:#2E8B57; font-weight:600;">Solicită o ofertă</a>
+            <a id="service-general-link" href="#contact" style="color:#2E8B57; font-weight:600;" data-trans="serviceGeneralLink">Solicită o ofertă</a>
           </p>
         </div>
 
@@ -194,111 +109,102 @@ footer {
 
     <!-- PRICES -->
     <section id="prices">
-      <h2 class="fade-up">Lista de Prețuri</h2>
+      <h2 id="prices-title" class="fade-up" data-trans="pricesTitle">Lista de Prețuri</h2>
 
       <div class="prices">
         <div class="price-box fade-up">
-          <h3>Documente oficiale</h3>
-          <p>50–70 lei / pagină</p>
+          <h3 id="price-documents" data-trans="priceDocuments">Documente oficiale</h3>
+          <p id="price-documents-value" data-trans="priceDocumentsValue">50–70 Ron / pagină</p>
         </div>
         <div class="price-box fade-up">
-          <h3>Traduceri tehnice</h3>
-          <p>60–90 lei / pagină</p>
+          <h3 id="price-technical" data-trans="priceTechnical">Traduceri tehnice</h3>
+          <p id="price-technical-value" data-trans="priceTechnicalValue">60–90 Ron / pagină</p>
         </div>
         <div class="price-box fade-up">
-          <h3>Traduceri medicale</h3>
-          <p>55–80 lei / pagină</p>
+          <h3 id="price-medical" data-trans="priceMedical">Traduceri medicale</h3>
+          <p id="price-medical-value" data-trans="priceMedicalValue">55–80 Ron / pagină</p>
         </div>
         <div class="price-box fade-up">
-          <h3>Traduceri generale</h3>
-          <p>40–60 lei / pagină</p>
+          <h3 id="price-general" data-trans="priceGeneral">Traduceri generale</h3>
+          <p id="price-general-value" data-trans="priceGeneralValue">40–60 Ron / pagină</p>
         </div>
       </div>
     </section>
 
     <!-- LANGUAGES -->
     <section id="languages">
-      <h2 class="fade-up">Limbi disponibile</h2>
-
-      <div class="languages-grid fade-up">
-
-        <div><img src="https://flagcdn.com/w40/gb.png" alt="Traduceri Engleză București"> Engleză</div>
-        <div><img src="https://flagcdn.com/w40/fr.png" alt="Traduceri Franceză București"> Franceză</div>
-        <div><img src="https://flagcdn.com/w40/de.png" alt="Traduceri Germană București"> Germană</div>
-        <div><img src="https://flagcdn.com/w40/sk.png" alt="Traduceri Slovacă București"> Slovacă</div>
-        <div><img src="https://flagcdn.com/w40/dk.png" alt="Traduceri Daneză București"> Daneză</div>
-        <div><img src="https://flagcdn.com/w40/no.png" alt="Traduceri Norvegiană București"> Norvegiană</div>
-        <div><img src="https://flagcdn.com/w40/sa.png" alt="Traduceri Arabă București"> Arabă</div>
-        <div><img src="https://flagcdn.com/w40/gr.png" alt="Traduceri Greacă București"> Greacă</div>
-        <div><img src="https://flagcdn.com/w40/it.png" alt="Traduceri Italiană București"> Italiană</div>
-        <div><img src="https://flagcdn.com/w40/cn.png" alt="Traduceri Chineză București"> Chineză</div>
-        <div><img src="https://flagcdn.com/w40/tr.png" alt="Traduceri Turcă București"> Turcă</div>
-        <div><img src="https://flagcdn.com/w40/bg.png" alt="Traduceri Bulgară București"> Bulgară</div>
-        <div><img src="https://flagcdn.com/w40/lt.png" alt="Traduceri Lituaniană București"> Lituaniană</div>
-        <div><img src="https://flagcdn.com/w40/pl.png" alt="Traduceri Poloneză București"> Poloneză</div>
-        <div><img src="https://flagcdn.com/w40/al.png" alt="Traduceri Albaneză București"> Albaneză</div>
-        <div><img src="https://flagcdn.com/w40/fi.png" alt="Traduceri Finlandeză București"> Finlandeză</div>
-        <div><img src="https://flagcdn.com/w40/rs.png" alt="Traduceri Sârbă București"> Sârbă</div>
-        <div><img src="https://flagcdn.com/w40/pt.png" alt="Traduceri Portugheză București"> Portugheză</div>
-        <div><img src="https://flagcdn.com/w40/hu.png" alt="Traduceri Maghiară București"> Maghiară</div>
-        <div><img src="https://flagcdn.com/w40/ro.png" alt="Traduceri Română București"> Română</div>
-
+      <h2 id="languages-title" class="fade-up" data-trans="languagesTitle">Limbi disponibile</h2>
+      <div id="languages-list" class="languages-grid fade-up">
+        <div id="lang-en" data-trans="languagesList.0"><img src="https://flagcdn.com/w40/gb.png" alt="Steagul Regatului Unit - Traduceri Engleză București"> Engleză</div>
+        <div id="lang-fr" data-trans="languagesList.1"><img src="https://flagcdn.com/w40/fr.png" alt="Steagul Franței - Traduceri Franceză București"> Franceză</div>
+        <div id="lang-de" data-trans="languagesList.2"><img src="https://flagcdn.com/w40/de.png" alt="Steagul Germaniei - Traduceri Germană București"> Germană</div>
+        <div id="lang-sk" data-trans="languagesList.3"><img src="https://flagcdn.com/w40/sk.png" alt="Steagul Slovaciei - Traduceri Slovacă București"> Slovacă</div>
+        <div id="lang-dk" data-trans="languagesList.4"><img src="https://flagcdn.com/w40/dk.png" alt="Steagul Danemarcei - Traduceri Daneză București"> Daneză</div>
+        <div id="lang-no" data-trans="languagesList.5"><img src="https://flagcdn.com/w40/no.png" alt="Steagul Norvegiei - Traduceri Norvegiană București"> Norvegiană</div>
+        <div id="lang-sa" data-trans="languagesList.6"><img src="https://flagcdn.com/w40/sa.png" alt="Steagul Arabiei Saudite - Traduceri Arabă București"> Arabă</div>
+        <div id="lang-gr" data-trans="languagesList.7"><img src="https://flagcdn.com/w40/gr.png" alt="Steagul Greciei - Traduceri Greacă București"> Greacă</div>
+        <div id="lang-it" data-trans="languagesList.8"><img src="https://flagcdn.com/w40/it.png" alt="Steagul Italiei - Traduceri Italiană București"> Italiană</div>
+        <div id="lang-cn" data-trans="languagesList.9"><img src="https://flagcdn.com/w40/cn.png" alt="Steagul Chinei - Traduceri Chineză București"> Chineză</div>
+        <div id="lang-tr" data-trans="languagesList.10"><img src="https://flagcdn.com/w40/tr.png" alt="Steagul Turciei - Traduceri Turcă București"> Turcă</div>
+        <div id="lang-bg" data-trans="languagesList.11"><img src="https://flagcdn.com/w40/bg.png" alt="Steagul Bulgariei - Traduceri Bulgară București"> Bulgară</div>
+        <div id="lang-lt" data-trans="languagesList.12"><img src="https://flagcdn.com/w40/lt.png" alt="Steagul Lituaniei - Traduceri Lituaniană București"> Lituaniană</div>
+        <div id="lang-pl" data-trans="languagesList.13"><img src="https://flagcdn.com/w40/pl.png" alt="Steagul Poloniei - Traduceri Poloneză București"> Poloneză</div>
+        <div id="lang-al" data-trans="languagesList.14"><img src="https://flagcdn.com/w40/al.png" alt="Steagul Albaniei - Traduceri Albaneză București"> Albaneză</div>
+        <div id="lang-fi" data-trans="languagesList.15"><img src="https://flagcdn.com/w40/fi.png" alt="Steagul Finlandei - Traduceri Finlandeză București"> Finlandeză</div>
+        <div id="lang-rs" data-trans="languagesList.16"><img src="https://flagcdn.com/w40/rs.png" alt="Steagul Serbiei - Traduceri Sârbă București"> Sârbă</div>
+        <div id="lang-pt" data-trans="languagesList.17"><img src="https://flagcdn.com/w40/pt.png" alt="Steagul Portugaliei - Traduceri Portugheză București"> Portugheză</div>
+        <div id="lang-hu" data-trans="languagesList.18"><img src="https://flagcdn.com/w40/hu.png" alt="Steagul Ungariei - Traduceri Maghiară București"> Maghiară</div>
+        <div id="lang-ro" data-trans="languagesList.19"><img src="https://flagcdn.com/w40/ro.png" alt="Steagul României - Traduceri Română București"> Română</div>
       </div>
-
-      <p style="text-align:center; margin-top:25px; font-weight:600; color:#2E8B57;">
-        Ai nevoie de o traducere rapidă? Trimite documentul și îți răspundem în cel mai scurt timp.
-      </p>
-
-      <p class="seo-note fade-up" style="margin-top:20px; text-align:center; color:#555;">
-        Oferim traduceri autorizate în Engleză, Franceză, Germană, Italiană, Chineză, Arabă, Portugheză, Maghiară și alte limbi. Servicii rapide în Sector 1, București.
-      </p>
+      <p id="languages-cta" style="text-align:center; margin-top:25px; font-weight:600; color:#2E8B57;" data-trans="languagesCTA">Ai nevoie de o traducere rapidă? Trimite documentul și îți răspundem în cel mai scurt timp.</p>
+      <p id="languages-seo" class="seo-note fade-up" style="margin-top:20px; text-align:center; color:#555;" data-trans="languagesSEO">Oferim traduceri autorizate în Engleză, Franceză, Germană, Italiană, Chineză, Arabă, Portugheză, Maghiară și alte limbi. Servicii rapide în Sector 1, București.</p>
     </section>
 
     <!-- CONTACT FORM -->
     <section id="contact">
-      <h2 class="fade-up">Contact / Solicită o ofertă</h2>
+      <h2 id="contact-title" class="fade-up" data-trans="contactTitle">Contact / Solicită o ofertă</h2>
 
       <form class="fade-up" action="https://formspree.io/f/mlggoeog" method="POST">
 
         <div class="input-group">
           <span class="icon">👤</span>
-          <input type="text" name="name" placeholder="Nume complet" required>
+          <input id="contact-name" type="text" name="name" data-trans-attr="placeholder|contactName" placeholder="Nume complet" required>
         </div>
 
         <div class="input-group">
           <span class="icon">✉️</span>
-          <input type="email" name="email" placeholder="Email" required>
+          <input id="contact-email" type="email" name="email" data-trans-attr="placeholder|contactEmail" placeholder="Email" required>
         </div>
 
         <div class="input-group">
           <span class="icon">📞</span>
-          <input type="tel" name="phone" placeholder="Telefon" required>
+          <input id="contact-phone" type="tel" name="phone" data-trans-attr="placeholder|contactPhone" placeholder="Telefon" required>
         </div>
 
         <div class="input-group">
           <span class="icon">📄</span>
-          <select name="service" required>
-            <option value="">Selectează tipul de traducere</option>
-            <option value="oficiale">Documente oficiale</option>
-            <option value="tehnice">Tehnice</option>
-            <option value="medicale">Medicale</option>
-            <option value="generale">Generale</option>
+          <select id="contact-service" name="service" required>
+            <option id="contact-service-placeholder" value="" data-trans="contactServicePlaceholder">Selectează tipul de traducere</option>
+            <option id="contact-service-oficiale" value="oficiale" data-trans="contactServiceOficiale">Documente oficiale</option>
+            <option id="contact-service-tehnice" value="tehnice" data-trans="contactServiceTehnice">Tehnice</option>
+            <option id="contact-service-medicale" value="medicale" data-trans="contactServiceMedicale">Medicale</option>
+            <option id="contact-service-generale" value="generale" data-trans="contactServiceGenerale">Generale</option>
           </select>
         </div>
 
         <div class="input-group textarea-group">
           <span class="icon">📝</span>
-          <textarea name="message" rows="5" placeholder="Mesaj / Detalii" required></textarea>
+          <textarea id="contact-message" name="message" rows="5" data-trans-attr="placeholder|contactMessage" placeholder="Mesaj / Detalii" required></textarea>
         </div>
 
-        <button type="submit">Trimite</button>
+        <button id="contact-submit" type="submit" data-trans="contactSubmit">Trimite</button>
       </form>
     </section>
 
     <!-- LOCATION -->
     <section id="location">
-      <h2 class="fade-up">Locația noastră</h2>
-      <p>Ne găsiți în Sector 1, București</p>
+      <h2 id="location-title" class="fade-up" data-trans="locationTitle">Locația noastră</h2>
+      <p id="location-desc" data-trans="locationDesc">Ne găsiți în Sector 1, București</p>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.548927003508!2d26.081998!3d44.454927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4c9b4b6c7f%3A0x9f0a7e95135406fc!2sBulevardul%20Banu%20Manta%2021%2C%20Bucure%C8%99ti%20011086!5e0!3m2!1sro!2sro!4v1700000000000!5m2!1sro!2sro"
@@ -309,33 +215,72 @@ footer {
         loading="lazy">
       </iframe>
 
-      <p style="text-align:center; margin-top:15px;">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Bdul+Banu+Manta+21+Bucuresti" 
-           style="color:#2E8B57; font-weight:600; text-decoration:underline;">
-           Obține indicații de orientare
-        </a>
+      <p id="location-link-container" style="text-align:center; margin-top:15px;">
+        <a id="location-link" href="https://www.google.com/maps/dir/?api=1&destination=Bdul+Banu+Manta+21+Bucuresti" style="color:#2E8B57; font-weight:600; text-decoration:underline;" data-trans="locationLink">Obține indicații de orientare</a>
       </p>
-    </section>
-
-  </div>
-
-  <!-- FLOATING BUTTONS -->
   <div class="floating-buttons">
     <a href="tel:0736559687" class="call" title="Sună-ne">📞</a>
     <a href="https://wa.me/40736559687" target="_blank" class="whatsapp" title="WhatsApp">💬</a>
   </div>
 
   <!-- FOOTER -->
-  <footer>
+  <footer data-trans="footer">
     &copy; 2026 Toujours Vert | Email: ToujoursVert@proton.me | Tel: 0736 559 687
   </footer>
 
   <!-- ANIMATIONS -->
-  <script>
-
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    document.getElementById('languageSwitcher').addEventListener('change', function(e) {
+      var lang = e.target.value;
+      // For demo: just alert, but you can redirect or reload with ?lang=xx
+      if(lang === 'en') {
+        window.location.href = window.location.pathname + '?lang=en';
+      } else if(lang === 'fr') {
+        window.location.href = window.location.pathname + '?lang=fr';
+      } else {
+        window.location.href = window.location.pathname + '?lang=ro';
+      }
+    });
 
+    // Choices.js initialization for custom select
+    const contactServiceSelect = document.getElementById('contact-service');
+    const choices = new Choices(contactServiceSelect, {
+      searchEnabled: false,
+      placeholderValue: 'Selectează tipul de traducere',
+      noResultsText: 'Niciun rezultat găsit',
+      loadingText: 'Se încarcă...',
+      classNames: {
+        containerOuter: 'choices custom-choices',
+        containerInner: 'choices__inner',
+        input: 'choices__input',
+        list: 'choices__list',
+        item: 'choices__item',
+        button: 'choices__button',
+        placeholder: 'choices__placeholder',
+        noResults: 'choices__no-results',
+        loading: 'choices__loading',
+      },
+    });
 
+    // Language button functionality
+    document.querySelectorAll('.lang-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        var lang = this.getAttribute('data-lang');
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        // For demo: just alert, but you can redirect or reload with ?lang=xx
+        if(lang === 'en') {
+          window.location.href = window.location.pathname + '?lang=en';
+        } else if(lang === 'fr') {
+          window.location.href = window.location.pathname + '?lang=fr';
+        } else {
+          window.location.href = window.location.pathname + '?lang=ro';
+        }
+      });
+    });
+  </script>
 
 </body>
 
